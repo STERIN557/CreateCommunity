@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Front page 😅</title>
+    <link rel="stylesheet" href="ComPage.css">
+    <script src="jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui.theme.css">
+    
+</head>
+<body>
+    <header>
+     <ul><a id="sendit" href="">Post</a></ul>
+     <ul>Logout</ul>
+     <ul>Contacts</ul>
+     
+    </header>
+   <div class="logo"></div>
+       <div class="heading" style="color:white">
+           CREATE COMMUNITY
+       </div>
+   
+       <div class="head2" id="hw"
+       style=" color:white; font-size: 30px; font-family:'Times New Roman', Times, serif;">
+      VIEW POSTS </div>
+       <div class="showTheCommunityName" style="color:white">
+
+       </div>
+    <section class="aboutAppa" style="color:white; text-align: center;">
+        <p>
+            <br> <br> This is a Social site where people can post anything they like according to 
+            there wish in there community, and this site is not for personal chatting instead 
+            the focus here is on public people can post and everyone who is having a account with
+            the related community can view the content and post made by other members of the same
+            community and this, people can post images, text and people and comment on the text or images
+            that the member of the community has put on the website.
+        </p>
+    </section>
+    <div id="some" style="margin-top:460px"></div>
+    <section id="posts" style="color:white;">
+        <div class="contents">
+          <div class="contentIn">
+              <img src="person.png" alt="">
+          </div>
+          <div class="comnameAndpersonName">
+              <p id="ioss"></p>
+              <script>
+                  var url = location.search;
+                 var url1 = url.slice(7);
+                 var url2 = url1.split('&');
+                 var url3 = url2[1].slice(9);
+                 console.log(url3);
+                 console.log(url2[0]);
+
+                 $(".showTheCommunityName").text(url2[0]);//showing the community name on the class 
+                 
+                 $.post("ComPage.php",{
+                     Cname:url2[0],
+                     username:url3
+                 },function(data,status)
+                 {
+                     console.log(data);
+                     console.log(status);
+                 })
+                //   now code to send to post page 
+                $("#sendit").attr("href","../comunity/createpost.html?"+"Cname="+url2[0]+"&username="+url3);
+                
+              </script>
+          </div>
+        </div>
+    </section>
+    <footer>
+    copyright@2019
+    </footer>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    </script>
+
+    <script>
+        $("#posts").hide();
+     $("#hw").click(function()
+     {
+         
+       window.location.href = "../newPostIT.html"+"?"+"Cname"+url2[0]+"&username="+url3;
+     })
+     
+     
+    </script>
+
+</body>
+</html>

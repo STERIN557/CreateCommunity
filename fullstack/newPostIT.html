@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewPOST</title>
+    <script src="./comunity/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="newPostIt.css">
+</head>
+<body>
+    <section >
+
+        
+            <section>
+               <div class="box1ka1">
+                    <div class="searchbox">
+                        <div class="inputs">
+                        <input type="searchwala" placeholder="Search" id="searchIcon1">
+                        </div>
+                        <div class="searchIcon">
+                       </div>
+                      <section class="space"></section>
+                     </div>
+                     <div class="peopless">
+                         
+                        </div>
+                   
+                
+            </div>
+            <div class="box1kaIMP"></div>
+               <div class="box1ka2">
+                  <div class="text-areas">
+                     <div class="logoForTextarea">
+                      <!-- the logoForTextarea will be off when somebody clicks on the chat and -->
+                      <div class="chat"></div>
+                      <!-- chat will be set on and will be visible and vice-versa -->
+                     </div>
+                  </div>
+               </div>
+            </section>
+       
+  
+    </section>
+    <script>
+        $(".inputs").hide();
+        var i=1;
+    $(".searchIcon").click(function () {
+        i++;
+        if(i==1)
+        {
+       $(".inputs").hide();
+        }
+        if(i==2)
+        {
+            $(".inputs").show();
+            i=0;
+      
+        }
+      })
+
+
+
+
+      
+     var sp;
+    //   
+    // 
+    $.post("newPostIT.php",function(data,status)
+     {
+   
+ 
+       var B=JSON.parse(data);
+       console.log(B);
+       console.log(B.length)
+        sp = new Array();
+       for(var i=0;i<B.length;i++)
+       {    if(B[i][2]!=""||B[i][2]==undefined||B[i][2]==NaN){
+           console.log(B[i][2]);
+           sp.push(B[i][2]);
+       }
+           else{
+               continue;
+           }
+        }
+    //   
+    // 
+    //     USERS NAME ARE SAVED IN " SP " array
+    // 
+    
+    // 
+
+    console.log(sp.length)
+
+
+    function addUsers(){
+          
+          for (let index = 0; index <sp.length; index++) {
+           $(".peopless").prepend(`<div class="someHead"><div class='some'> <div class="imgss"> <img src="ships.jpg"></div>  <div class='namess'> ${sp[index]} </div></div>`);
+    
+        
+          
+          }
+      }
+      addUsers();
+  
+
+
+
+     })
+
+
+
+    // 
+    // 
+  
+
+    // someother stuff here please note 
+
+
+
+    document.getElementById("searchIcon1").addEventListener("keypress",searchLetter);
+     function searchLetter()
+     {
+        var s=document.getElementById("searchIcon1").value;
+        // for searching the name from the users I will be using this
+        console.log(s)
+     }
+       
+     $(".box1ka2").click(function()
+     {
+         $(".box1ka2").css("display","none");
+          $(".box1kaIMP").css("display","block");
+          $(".box1kaIMP").prepend(`<div class="colorit"> <div class="inhead">${d11}</div> </div>`)
+     })
+     var d= window.location.search;
+     console.log(d);
+     var d1 = d.split('&');
+     var d11 = d1[0].slice(6);
+     var d12 = d1[1].slice(9);
+     console.log(d11);
+     console.log(d12);
+      </script>
+</body>
+</html>

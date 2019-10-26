@@ -1,0 +1,134 @@
+header{
+position: relative;
+left: 1000px;
+
+}
+body{
+    background-color: black;
+   
+} 
+ul{
+    display: inline-block;
+    border: 2px solid dodgerblue;
+    color: white;
+    padding:5px 20px 5px 20px ;
+    margin:10px;
+    border-radius: 20px;
+    
+}
+ul:hover{ 
+    cursor: pointer;
+    background-image: radial-gradient(
+        at  30% 40%,
+      white,
+      white
+    );
+    color: dodgerblue;
+}
+.logo{
+    top:-30px;
+    display: block;
+    height: 100px;
+    width:100px;
+    position: relative;
+    border:10px solid white;
+    border-right: none;
+    border-radius: 100px;
+  
+}
+.logo::before{
+    display: block;
+    position: absolute;
+    content: '';
+    height:100px;
+    width:100px;
+    border:10px solid dodgerblue;
+    border-radius: 100px;
+    border-right: none;
+    top:-10px;
+    left:20px;
+}
+.head2{
+    display: block;
+    height: 50px;
+    width:200px;
+    position: relative;
+    padding: 20px 20px 10px 50px;
+    border-radius: 100px;
+    animation:changecolor 2s infinite;
+    -webkit-animation: changecolor 2s infinite;
+    left:40%;
+}
+@keyframes changecolor{
+from{border:5px solid dodgerblue;}
+to{  border:5px solid white;}
+}
+@-webkit-keyframes changecolor{
+    from{border:5px solid dodgerblue;}
+to{  border:5px solid white;}
+}
+.aboutAppa{
+    padding-top: 30px;
+    padding-left:350px;
+    padding-right: 300px;
+    font-size: 18px;
+    
+}
+.head2:hover{
+cursor: pointer;
+}
+
+.contents{
+    display: block;
+    position: relative;
+    height: 200px;
+    width:200px;
+    border:5px solid deepskyblue;
+    border-radius: 15px;
+    margin:30px;
+    text-align: center;
+}
+.contentIn img{
+    height:199px;
+    width:199px;
+    
+}
+.showTheCommunityName{
+  font-size: 100px;
+  width:max-content;
+  font-family: 'Times New Roman', Times, serif;
+  display:  block;
+  position: relative;
+  text-align: center;
+  top:-250px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: 5s;
+  animation: changeborder 0.4s infinite;
+  -webkit-animation:  changeborder 4s infinite;
+  margin:auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@keyframes changeborder{
+    from{border-top:5px solid dodgerblue;
+         border-bottom: 5px solid dodgerblue;
+        border-left: 5px solid white;
+        border-right: 5px solid white;}
+    to{ 
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        border-left: 5px solid dodgerblue;
+        border-right: 5px solid dodgerblue;}
+}
+@-webkit-keyframes changeborder{
+    from{border-top:5px solid dodgerblue;
+        border-bottom: 5px solid dodgerblue;
+        border-left: 5px solid white;
+        border-right: 5px solid white;}
+   to{ 
+       border-top: 5px solid white;
+       border-bottom: 5px solid white; 
+       border-left: 5px solid dodgerblue;
+       border-right: 5px solid dodgerblue;}
+}

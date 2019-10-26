@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Something</title>
+    <script src="jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="ko.css">
+</head>
+<body>
+   
+<section >
+<div id="box">
+
+</div>
+</section>
+
+<script>
+     var x;
+    $.post("ko.php",function(data,status){
+     x = data;
+});
+
+</script>
+</body>
+</html>
+
+.info input[type=text] ,input[type="password"],input[type="number"]
+{
+    position: relative;
+    left:300px;
+    top:20px;
+    border:2px solid deepskyblue;
+    font-size: 15px;
+    border-radius: 30px;
+    height: 25px;
+    width:200px;
+    padding-left: 20px;
+   overflow: scroll;
+    
+}
+
+.headin{
+    text-align: center;
+    padding-top:10px;
+    background-image: radial-gradient(
+        at 30% 40%,
+        deepskyblue,
+        dodgerblue
+    );
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 10px;
+}
+.loger{
+    height: 40px;
+    width:40px;
+    display: block;
+    border:10px solid black;
+    border-right: none;
+    border-radius: 100px;
+    position: relative;
+    top:0px;
+    left:350px;
+    cursor: pointer;
+}
+.loger::before
+{
+    display: block;
+    width:40px;
+    height: 40px;
+    content: '';
+    border:10px solid white;
+    position:absolute;
+    left:40px;
+    top:-10px;
+    border-right:none;
+    border-radius: 100px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../today.css">
+    <link rel="script" type="text/script" href="today.js">
+    <script src="./jquery-3.4.1.js"></script>
+    <script src="../fullstack/comunity/jquery-3.4.1.js"></script>
+    <!-- somestupid stuff here -->
+   
+</head>
+<body>  
+<header >
+        <div class="KamWala">
+                <li><a href="../comunity/community.html">CC</a></li>
+                <li><a href="../comunity/login.html">Login</a></li>
+                <li><a href="../comunity/signup.html">Signup</a></li>
+                <li><a href="../comunity/contact.html">Contacts</a></li>
+            </div>
+    <div class="topnav" id="myTopnav" >
+  <ul><a href="../comunity/community.html">Create Community</a></ul>
+  <ul><a href="../comunity/login.html">Login</a></ul>
+  <ul><a href="../comunity/signup.html">Signup</a></ul>
+  <ul><a href="../comunity/contact.html">Contacts</a></ul>
+  <ul><a href="../javascript:void(0);"class="icon" onclick="myFunction()">
+        
+</a></ul>
+</div>
+</header>
+<div class="logo">
+    <!-- Here I created the logo using css -->
+</div>
+<section>
+    <div class="animate">
+        CREATE COMMUNITY
+    </div>
+</section>
+
+<script>
+    // my magic function here is called when the user for the first time reloads the 
+    // and the window.resize funtion will be activated when user tries to resize the 
+    // the browser screen size 
+function myMagic()
+{
+    if($("ul").css("display")=='none'){
+     
+    }
+}
+myMagic();
+$(window).resize(function()
+{
+    if($("ul").css("display")=='none'){
+   
+}    
+})
+var i=0;
+$(".topnav").click(function()
+{
+ i++;
+ if(i==1)
+ {
+  $(".KamWala").show(500);
+  $(".topnav").css("left","75%");
+ }if(i==2){
+     $(".KamWala").hide(500);
+     $(".topnav").css("left","96%");
+     i=0;
+ }
+})
+
+</script>
+
+
+
+</body>
+</html>

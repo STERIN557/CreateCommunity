@@ -1,0 +1,25 @@
+     <div class="spaceForContent">
+                  <div class="people">
+                      <div class="images">
+                              
+                          <div class="name">
+                                <!-- for the name of the user -->
+                                <div class="color">
+                                    <!-- to tell whether the person is Online or not -->
+                                </div>
+                            </div>
+                            
+                        
+                      </div>
+                      <!-- above one is for the icon image -->
+                     
+  
+                  </div>
+               </div>
+
+
+
+            //// here is some stuff here
+            //// so enjoy now you asshole
+                $(".name").append('<img src="./comunity/person.png">');
+            $(".color").append( sp[index]+"<br><br><br><br><br>");

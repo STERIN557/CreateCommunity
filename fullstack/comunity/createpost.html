@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>createPost</title>
+    <link rel="stylesheet" href="createpost.css">
+     <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section>
+    <div class="imageit">
+            <img src="" id="por" >
+        <div class="contentIn">
+            <div class="per">
+                    <img src="phoneimage.png" >
+            </div>
+           
+        </div>
+    </div>
+    </div>
+</section>
+<section>
+    <div class="box">
+        <input type="text" name="title" id="titl" placeholder="Title">
+        <br><br>
+       <textarea name="post" id="post" cols="30" rows="10" aria-setsize="400px"></textarea>
+    </div>
+</section>
+        
+            
+</body>
+<script>
+function pushit()
+{
+var x = $(".inp").val();
+var y = $("#texts").val();
+if(x && y)
+{
+  $.post("createpost.php",{
+      post:x,
+      comment:y
+  },function(data,status)
+  {
+      alert(data);
+  }
+  )
+}
+else{
+    alert("The field cannot be empty");
+}
+}
+ var repeater;
+ var i=0;
+ function imageChager() {
+      var t;
+     if(i%2==0)
+     {
+         t="toggle()"
+     $("#por").attr("src","1.png").fadeIn(4000);
+     $("#por").attr("src","2.png").fadeOut(4000);
+     }else{
+         $("#por").attr("src","2.png").fadeIn(4000);
+         $("#por").attr("src","1.png").fadeOut(4000);
+     }
+    if(i>4)
+    { i=0;}
+    i++;
+     repeater = setTimeout(imageChager,2000);
+     console.log(i);
+   }
+   imageChager();
+</script>
+</body>
+</html>

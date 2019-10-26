@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Front page 😅</title>
+    <link rel="stylesheet" href="Front%20page%20%F0%9F%98%85_files/ComPage.css">
+    <script src="Front%20page%20%F0%9F%98%85_files/jquery-3.js"></script>
+    <link rel="stylesheet" href="Front%20page%20%F0%9F%98%85_files/jquery-ui_002.css">
+    <link rel="stylesheet" href="Front%20page%20%F0%9F%98%85_files/jquery-ui_003.css">
+    <link rel="stylesheet" href="Front%20page%20%F0%9F%98%85_files/jquery-ui.css">
+    
+</head>
+<body>
+    <header>
+     <ul>Post</ul>
+     <ul>Logout</ul>
+     <ul>Contacts</ul>
+     
+    </header>
+   <div class="logo"></div>
+       <div class="heading" style="color:white">
+           CREATE COMMUNITY
+       </div>
+   
+       <div class="head2" id="hw" style=" color:white; font-size: 30px; font-family:'Times New Roman', Times, serif;">
+      VIEW POSTS </div>
+       <div class="showTheCommunityName" style="color:white">sterinsajij</div>
+    <section class="aboutAppa" style="color:white; text-align: center;">
+        <p>
+            <br> <br> This is a Social site where people can post anything they like according to 
+            there wish in there community, and this site is not for personal chatting instead 
+            the focus here is on public people can post and everyone who is having a account with
+            the related community can view the content and post made by other members of the same
+            community and this, people can post images, text and people and comment on the text or images
+            that the member of the community has put on the website.
+        </p>
+    </section>
+    <div id="some" style="margin-top:460px"></div>
+    <section id="posts" style="color: white; display: none;">
+        <div class="contents">
+          <div class="contentIn">
+              <img src="Front%20page%20%F0%9F%98%85_files/person.png" alt="">
+          </div>
+          <div class="comnameAndpersonName">
+              <p id="ioss"></p>
+              <script>
+                  var url = location.search;
+                 var url1 = url.slice(7);
+                 console.log(url1);
+
+                 $(".showTheCommunityName").text(url1);//showing the community name on the class 
+                 
+                 $.post("ComPage.php",{
+                     Cname:url1
+                 },function(data,status)
+                 {
+                     console.log(data);
+                     console.log(status);
+                 })
+                
+              </script>
+          </div>
+        </div>
+    </section>
+    <footer>
+    copyright@2019
+    </footer>
+    <script src="Front%20page%20%F0%9F%98%85_files/jquery-ui.html"></script>
+    
+
+    <script>
+        $("#posts").hide();
+     $("#hw").click(function()
+     {
+         $("#posts").show();
+        
+         document.getElementById("posts").scrollIntoView();
+     })
+     
+     
+    </script>
+
+</body></html>

@@ -1,0 +1,22 @@
+.fof{
+    padding-top:60px;
+position: relative;
+font-family: 'Times New Roman', Times, serif;
+font-size: 300px;
+text-align: center;
+color:white;
+}
+.mes{
+position: relative;
+font-size: 100px;
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+color:white;
+}
+body{
+    background-image:radial-gradient(
+        at 10% 30%,
+        deepskyblue,
+        dodgerblue
+    );
+}

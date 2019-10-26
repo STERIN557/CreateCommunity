@@ -1,0 +1,200 @@
+html{
+
+   overflow: hidden;
+}
+
+
+
+.box1ka1{
+ height: 96%;
+ width: 38.5%;
+display: inline-block;
+ 
+ position:absolute;
+ background-color: #fff;
+  border:2px solid green;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.box1ka2{
+height:96%;
+width:60%;
+position: absolute;
+margin-left: 38%;
+}
+.searchbox{
+    display: block;
+    height: 40px;
+    width:36%;
+    position: fixed;
+    top:22px;
+    margin-left: 15px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border:2px solid green;
+
+} 
+.peopless{
+    margin-bottom: 50px;
+    position: relative;
+
+}
+.searchIcon{
+    display: block;
+    position: absolute;
+    height:20px;
+    width: 20px;
+    border:3px solid black;
+    border-radius: 100px;
+    left:85%;
+    top:5px;
+    z-index:2;
+}
+.searchIcon:before{
+    content: '';
+    display: block;
+    height:10px;
+    width:20px;
+    border-left: 4px solid black;
+    transform:rotate(140deg);
+    position: absolute;
+    top:24px;
+    z-index: -2;
+
+}
+.text-areas{
+    display: block;
+    position: relative;
+    background-image:radial-gradient(
+        at 1% 2%,
+         deepskyblue,
+        black
+    );
+    height: 100%;
+    width:100%;
+    
+    margin-left: 10px;
+}
+input[type="searchwala"]
+{
+display: block;
+height:35px;
+width:400px;
+position: relative;
+margin:0 auto;
+left: -57px;
+background-color: white;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+border-radius: 5px;
+border:1.5px solid transparent;
+border:2px solid green;
+}
+
+
+.logoForTextarea{
+
+    display: block;
+    content:'';
+    height:300px;
+    width:300px;;
+    border:30px solid white;
+    position: relative;
+    margin:0 auto;
+    top:20%;
+    border-right: none;
+    border-radius: 100%;
+    left:-30px;
+}
+.logoForTextarea:before{
+    display: block;
+    content: '';
+    height: 300px;
+    width: 300px;
+    border:30px solid black;
+    position: relative;
+    border-right: none;
+    left:60px;
+    border-radius: 100%;
+    top:-30px;
+}
+
+.color{
+   position: absolute;
+   left:150px;
+   margin-top:50%;
+   
+}
+
+.some{
+  
+    display:inline-block;
+    height: 70px;
+    width:98%;
+    background-color: white;
+    position: relative;
+    margin:0.5px 5px .5px 5px;
+    border-radius: 10px;
+    top:100px;
+    border:2px solid green;
+    cursor: pointer;
+   
+   
+}
+.someHead{
+   /* background-color:red; */
+}
+
+.namess{
+    display:block;
+    position: absolute;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    top:20px;
+    left:100px;
+   
+}
+.imgss img{
+display: block;
+position: absolute;
+height:65px;
+width:65px;
+border-radius: 100%;
+top:.3px;
+left:2px;
+border:2px solid green;
+}
+.box1kaIMP{
+    height:96%;
+width:58%;
+position: absolute;
+margin-left: 40%;
+background-color: rgb(206, 240, 217);
+display: block;
+border-radius:15px;
+display: none;
+
+}
+.inhead{
+    display:block;
+    position: absolute;
+    height: 20px;
+   
+    left:45%;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+     color:white;
+}
+.colorit{
+    position: relative;
+    background-color: rgb(164, 218, 79);
+    height: 50px;
+    width:100%;
+    display: block;
+
+}
+.space{
+   
+}

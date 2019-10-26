@@ -1,0 +1,21 @@
+
+.contentIn .per img{
+    position: relative;
+     height: 500px;
+     width: 400px;
+     top:200px;
+}
+#por{
+
+    position: absolute;;
+     height: 350px;
+     width: 220px;
+     top:267px;
+     left: 133px;
+
+}
+ .box{
+    position: relative;
+ left :60%;
+
+}

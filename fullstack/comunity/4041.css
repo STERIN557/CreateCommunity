@@ -1,0 +1,16 @@
+.mes{
+    position: relative;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+
+    padding-top:20%;
+}
+body{
+ background-image:repeating-radial-gradient(
+     at 40% 50%,
+     dodgerblue,
+     deepskyblue
+ );
+
+}

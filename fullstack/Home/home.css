@@ -1,0 +1,145 @@
+header{
+    background-image: radial-gradient(
+        at 30% 40%,
+        deepskyblue,
+        dodgerblue
+    );
+   
+}
+.list{
+    padding:30px;
+    color:white;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+ul{
+    display: inline;
+    position: relative;
+    left: 850px;
+  
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.logo{
+    height: 40px;
+    width:40px;
+    display: block;
+    border:10px solid black;
+    border-right: none;
+    border-radius: 100px;
+    position: relative;
+    top:-70px;
+    left:20px;
+    cursor: pointer;
+}
+.logo::before
+{
+    display: block;
+    width:40px;
+    height: 40px;
+    content: '';
+    border:10px solid white;
+    position:absolute;
+    left:40px;
+    top:-10px;
+    border-right:none;
+    border-radius: 100px;
+}
+body{
+    background-image: url("white.jpg");
+    background-size: 100%;
+   
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    text-align: center;
+    background-image: radial-gradient(
+        at 30% 40%,
+        deepskyblue,
+        dodgerblue
+    );
+    padding:20px;
+    color:white;
+    cursor: pointer;
+    
+}
+
+.loger{
+    display: block;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left:120px;
+    top:150px;
+    border:40px solid black;
+    border-right: none;
+    border-radius: 200px;
+}
+.loger::before{
+   
+    display: block;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left:200px;
+    top:-39px;
+    border:40px solid white;
+    border-right: none;
+    border-radius: 200px;
+    content:'';
+}
+.contacts{
+    position: relative;
+    left:-600px;
+    top:-100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+.foot{
+    display: block;
+    background-image:radial-gradient(
+       at 30% 40%,
+       deepskyblue,
+       dodgerblue
+    );
+    height: 200px;
+    width:300px;
+    content: '';
+  
+}
+img{
+    height: 190px;
+    width: 290px;
+    position: relative;
+    left:5px;
+    top:5px;
+}
+.edit{
+    position: relative;
+    left:0;
+    
+}
+button[type="submit"]{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding:5px 106px 5px 106px;
+    color:white;
+    background-image: radial-gradient(
+        at 30%  40%,
+        deepskyblue,
+        dodgerblue
+    );
+   
+}

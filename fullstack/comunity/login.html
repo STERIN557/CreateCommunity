@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Community</title>
+    <link rel="stylesheet" text="text/css" href="login.css">
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+        <header>
+                <div class="list">
+                  <div class="topnav">
+              <ul><a href="../Home/index.html">Home</a></ul>
+              <ul><a href="../comunity/login.html">Login</a></ul>
+              <ul><a href="../comunity/signup.html">Signup</a></ul>
+              <ul><a href="../comunity/contact.html">Contacts</a></ul>
+              </div>
+            </div>
+            </header>
+    <div class="logo"></div>
+    
+    <section>
+        <div class="boxer">
+        <div class="headin">
+            Login to your Community
+        </div>
+         <div class="info">
+             <form action="login.php" method="post">
+                 <input type="text" name="communityname" placeholder="Community name"><br><br>
+               
+                 <input type="text" name="username" placeholder="Usern Name"> <br><br>
+                 
+                 <input type="password" name="password" placeholder="password">
+                 <br><br>
+                
+                 <button type="submit" >Login</button>
+             </form>
+         </div>
+         <div class="foot">
+            <div class="loger"></div>
+         </div>
+        </div>
+    </section>
+    <section>
+        <div class="imc">
+            <img src="../iphone.png" >
+            <div class="s" >
+                <img src="../screen.png" >
+               
+            </div>
+        </div>
+    </section>
+    <script>
+    var repeater=0;
+     var x=0;
+     setInterval(repeatIt,3000);
+    function repeatIt() {
+      if(x%2==0){
+ 
+        $(".s img").fadeTo(5000)
+          var p = $(".s img").attr("src","../people.jpg");
+          console.log(p);
+      }
+      else{
+        $(".s img").fadeTo(5000);
+        
+          $(".s img").attr("src","../screen.png")
+      }
+      x++;
+      if(x>=5)
+      {
+    x=0;
+      }
+      
+      }
+     
+    </script>
+</body>
+</html>

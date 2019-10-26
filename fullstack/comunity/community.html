@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Community</title>
+    <link rel="stylesheet" text="text/css" href="community.css">
+</head>
+<body>
+        <header>
+          
+                <div class="list">
+                    <div class="topnav">
+              <ul><a href="../Home/home.html">Home</a></ul>
+              <ul><a href="../comunity/login.html">Login</a></ul>
+              <ul><a href="../comunity/signup.html">Signup</a></ul>
+              <ul><a href="../comunity/contact.html">Contacts</a></ul>
+            </div>
+            </div>
+            
+            </header>
+    <div class="logo"> </div>
+    <section>
+        <div class="color">
+            <div class="headin">
+                Create your Community here
+            </div>
+    <form method="post" id="forms" action="community.php">
+        <input type="text" id="su" name="Communityname" placeholder="Community name"><br><br><br>
+        <input type="text" name="Admin_User_Name" placeholder="Admin User Name"><br><br><br>
+        <input type="text" name="FirstName" placeholder="First name"><br><br><br>
+        <input type="text" name="LastName" placeholder="Last name"><br><br><br>
+        <input type="email" name="email " placeholder="Email"><br><br><br>
+        <input type="password" name="AdminPassword" placeholder="Admin password"><br><br><br>
+        <input type="password" name="ConfirmPassword" placeholder="Confirm password"><br><br><br>
+        <button type="submit" onclick="funt()" >Create Community</button>
+    </form>
+    </div>
+    </section>
+   
+  <script>
+   function funt(){
+  var x = document.getElementById("su").value;
+  if(x.length>8)
+  {
+    alert("Community Name length cannot be more than 8");
+  }
+  }
+
+  </script>
+</body>
+</html>

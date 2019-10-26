@@ -1,0 +1,52 @@
+.zoom{
+    background-color:white;
+    width:200px;
+    height: 200px;
+    margin: auto;
+    transition: transform .5s;
+    border-radius: 200px;
+    border-left: 20px solid blue;
+    border-right: 20px solid yellow;
+    border-top: 20px solid red;
+    border-bottom: 20px solid pink;
+    position: relative;
+    
+}
+.zoom:hover{
+    transform: rotate(360deg);
+  
+}
+.name
+{
+    position: absolute;
+    top:80px;
+    left:45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    transition: transform .2s;
+}
+.name:hover{
+transform: scale(1.5);
+}
+.portfolio{
+    background-image: radial-gradient(
+        at 12% 23%,
+         brown,
+        yellow
+    );
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:orange ;
+    margin-bottom: 10px;
+}
+section{
+    background-color:orange;
+    transition:transform .4s;
+    text-align: center;
+    margin-top:10px;
+    padding:30px;
+}
+section:hover
+{
+    transform:scale(1.4);
+}
