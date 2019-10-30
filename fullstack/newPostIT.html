@@ -5,78 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewPOST</title>
+ 
     <script src="./comunity/jquery-3.4.1.js"></script>
+    <script src="../fullstack/comunity/angular.min.js"></script>
     <link rel="stylesheet" href="newPostIt.css">
 </head>
 <body>
+  
+
+
     <section >
 
         
-            <section>
-               <div class="box1ka1">
+            <section >
+               <div class="box1ka1" ng-app="myModule" ng-controller="myCtrl">
                     <div class="searchbox">
-                        <div class="inputs">
-                        <input type="searchwala" placeholder="Search" id="searchIcon1">
+                        <div class="inputss">
+                        <input type="searchwala" placeholder="Search"  name="search" ng-model="search" id="searchIcon1">
                         </div>
                         <div class="searchIcon">
                        </div>
                       <section class="space"></section>
                      </div>
-                     <div class="peopless">
-                         
+                     <!-- <div id="iod" style="margin:35px;"></div> -->
+                     <div class="peopless"  >
+                             
+                                 <div class='some'   ng-repeat="i in a|filter:search" ng-click="funcc(i)"> 
+                                     <div class="imgss"> 
+                                        <img src="ships.jpg">
+                                </div>  
+                            <div class='namess'  >
+                               {{i}}
+                                </div>
                         </div>
-                   
-                
-            </div>
-            <div class="box1kaIMP"></div>
-               <div class="box1ka2">
-                  <div class="text-areas">
-                     <div class="logoForTextarea">
-                      <!-- the logoForTextarea will be off when somebody clicks on the chat and -->
-                      <div class="chat"></div>
-                      <!-- chat will be set on and will be visible and vice-versa -->
-                     </div>
-                  </div>
-               </div>
+                      
+                </div>
             </section>
+            <section>
+                <div class="whatchat">
+                    <div class="chatWala">
+                      <input type="chatss" id="chatsss" placeholder="Type a message">
+                      <div class="whatsICON" ><img src="./comunity/whaticon.png" ></div>
+                    </div>
+                </div>
+            </section> 
        
   
     </section>
+   
+    
     <script>
-        $(".inputs").hide();
-        var i=1;
-    $(".searchIcon").click(function () {
-        i++;
-        if(i==1)
-        {
-       $(".inputs").hide();
-        }
-        if(i==2)
-        {
-            $(".inputs").show();
-            i=0;
-      
-        }
-      })
-
-
-
-
-      
-     var sp;
+     var sp = new Array();
     //   
     // 
+
+    $(".searchIcon").click(function () {
+         console.log("hai")
+        
+           $("#iod").css("margin","100px");
+           console.log("jids")
+    
+        })
+
     $.post("newPostIT.php",function(data,status)
      {
    
  
        var B=JSON.parse(data);
-       console.log(B);
-       console.log(B.length)
-        sp = new Array();
+    //    console.log(B);
+    //    console.log(B.length)
+        // sp = new Array();
        for(var i=0;i<B.length;i++)
        {    if(B[i][2]!=""||B[i][2]==undefined||B[i][2]==NaN){
-           console.log(B[i][2]);
+        //    console.log(B[i][2]);
            sp.push(B[i][2]);
        }
            else{
@@ -89,20 +90,23 @@
     // 
     
     // 
+     
+   
+    
 
     console.log(sp.length)
 
 
-    function addUsers(){
+    // function addUsers(){
           
-          for (let index = 0; index <sp.length; index++) {
-           $(".peopless").prepend(`<div class="someHead"><div class='some'> <div class="imgss"> <img src="ships.jpg"></div>  <div class='namess'> ${sp[index]} </div></div>`);
+    //       for (let index = 0; index <sp.length; index++) {
+    //        $(".peopless").prepend(` <div class="someHead"><div class='some'> <div class="imgss"> <img src="ships.jpg"></div>  <div class='namess'> ${sp[index]} </div></div>`);
     
         
           
-          }
-      }
-      addUsers();
+    //       }
+    //   }
+    //   addUsers();
   
 
 
@@ -126,20 +130,41 @@
         // for searching the name from the users I will be using this
         console.log(s)
      }
-       
+
+     var d= window.location.search;
+     console.log(d);
+     var d1 = d.split('&');
+     var d11 = d1[0].slice(6);
+     var d12 = d1[1].slice(9);
      $(".box1ka2").click(function()
      {
          $(".box1ka2").css("display","none");
           $(".box1kaIMP").css("display","block");
           $(".box1kaIMP").prepend(`<div class="colorit"> <div class="inhead">${d11}</div> </div>`)
      })
-     var d= window.location.search;
-     console.log(d);
-     var d1 = d.split('&');
-     var d11 = d1[0].slice(6);
-     var d12 = d1[1].slice(9);
-     console.log(d11);
-     console.log(d12);
+   
+    //  console.log(d11);
+    //  console.log(d12);
+    console.log(sp)
+
+
+    // lets do some angular stuff here Yeaahhh.....
+    // It starts here and I will using the sp varible array for search box stuff 
+
+    angular.module("myModule",[]).controller("myCtrl",($scope)=>{
+       $scope.a = new Array();
+       $scope.a = sp;
+        console.log($scope.a);
+        $scope.funcc = function (s) {
+           
+           console.log(s)
+          }
+
+    })
+      
+ 
+  
+  
       </script>
 </body>
 </html>
